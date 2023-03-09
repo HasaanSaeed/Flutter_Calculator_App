@@ -15,20 +15,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // print('rebuild');
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Column(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
-                        padding: const EdgeInsets.all(20),
+                        // padding: const EdgeInsets.all(20),
                         alignment: Alignment.centerRight,
                         child: Text(
                           userInput,
@@ -37,224 +38,260 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.all(15),
+                        // padding: const EdgeInsets.all(15),
                         alignment: Alignment.centerRight,
                         child: Text(
                           answer,
                           style: const TextStyle(
-                              fontSize: 40,
+                              fontSize: 50,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
                       )
-                    ]),
+                    ],
+                  ),
+                ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      children: [
-                        CustomButton(
-                          title: 'AC',
-                          onPress: () {
-                            setState(() {
-                              userInput = '';
-                              answer = '0';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '+/-',
-                          onPress: () {},
-                        ),
-                        CustomButton(
-                          title: '%',
-                          onPress: () {
-                            setState(() {
-                              userInput += '%';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '/',
-                          onPress: () {
-                            setState(() {
-                              userInput += '/';
-                            });
-                          },
-                          color: const Color(0xffffa00a),
-                        ),
-                      ],
+              Expanded(
+                flex: 2,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        children: [
+                          CustomButton(
+                            title: 'AC',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput = '';
+                                  answer = '0';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '+/-',
+                            onPress: () {},
+                          ),
+                          CustomButton(
+                            title: '%',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '%';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '/',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '/';
+                                },
+                              );
+                            },
+                            color: const Color(0xffffa00a),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      children: [
-                        CustomButton(
-                          title: '7',
-                          onPress: () {
-                            setState(() {
-                              userInput += '7';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '8',
-                          onPress: () {
-                            setState(() {
-                              userInput += '8';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '0',
-                          onPress: () {
-                            setState(() {
-                              userInput += '0';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: 'x',
-                          onPress: () {
-                            setState(() {
-                              userInput += 'x';
-                            });
-                          },
-                          color: const Color(0xffffa00a),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        children: [
+                          CustomButton(
+                            title: '7',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '7';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '8',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '8';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '0',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '0';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: 'x',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += 'x';
+                                },
+                              );
+                            },
+                            color: const Color(0xffffa00a),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      children: [
-                        CustomButton(
-                          title: '4',
-                          onPress: () {
-                            setState(() {
-                              userInput += '4';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '5',
-                          onPress: () {
-                            setState(() {
-                              userInput += '5';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '6',
-                          onPress: () {
-                            setState(() {
-                              userInput += '6';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '-',
-                          onPress: () {
-                            setState(() {
-                              userInput += '-';
-                            });
-                          },
-                          color: const Color(0xffffa00a),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        children: [
+                          CustomButton(
+                            title: '4',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '4';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '5',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '5';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '6',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '6';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '-',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '-';
+                                },
+                              );
+                            },
+                            color: const Color(0xffffa00a),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      children: [
-                        CustomButton(
-                          title: '1',
-                          onPress: () {
-                            setState(() {
-                              userInput += '1';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '2',
-                          onPress: () {
-                            setState(() {
-                              userInput += '2';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '3',
-                          onPress: () {
-                            setState(() {
-                              userInput += '3';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '+',
-                          onPress: () {
-                            setState(() {
-                              userInput += '+';
-                            });
-                          },
-                          color: const Color(0xffffa00a),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        children: [
+                          CustomButton(
+                            title: '1',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '1';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '2',
+                            onPress: () {
+                              setState(() {
+                                userInput += '2';
+                              });
+                            },
+                          ),
+                          CustomButton(
+                            title: '3',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '3';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '+',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '+';
+                                },
+                              );
+                            },
+                            color: const Color(0xffffa00a),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      children: [
-                        CustomButton(
-                          title: '0',
-                          onPress: () {
-                            setState(() {
-                              userInput += '0';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '.',
-                          onPress: () {
-                            setState(() {
-                              userInput += '.';
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: 'DEL',
-                          onPress: () {
-                            setState(() {
-                              userInput =
-                                  userInput.substring(0, userInput.length - 1);
-                            });
-                          },
-                        ),
-                        CustomButton(
-                          title: '=',
-                          onPress: () {
-                            equalPressed();
-                            setState(() {});
-                          },
-                          color: const Color(0xffffa00a),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        children: [
+                          CustomButton(
+                            title: '0',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '0';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '.',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput += '.';
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: 'DEL',
+                            onPress: () {
+                              setState(
+                                () {
+                                  userInput = userInput.substring(
+                                      0, userInput.length - 1);
+                                },
+                              );
+                            },
+                          ),
+                          CustomButton(
+                            title: '=',
+                            onPress: () {
+                              equalPressed();
+                              setState(() {});
+                            },
+                            color: const Color(0xffffa00a),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -20,13 +20,17 @@ class CustomButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(0.0),
           child: Container(
-            height: 80,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+            height: 74,
+            decoration: BoxDecoration(
+                // borderRadius: BorderRadius.circular(0),
+                shape: BoxShape.circle,
+                color: color),
             child: Center(
-                child: Text(
-              title,
-              style: const TextStyle(color: Colors.white, fontSize: 20),
-            )),
+              child: Text(
+                title,
+                style: const TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
           ),
         ),
       ),
